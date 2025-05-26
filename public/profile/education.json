@@ -1,19 +1,40 @@
 {
     "education":[
         {
-            "title": "Jun 20XX - Jun 20YY",
-            "cardTitle": "B.Tech, Computer Science",
-            "cardSubtitle":"XYZ University, City",
-            "cardDetailedText": "CGPA - 9.5",
+            "title": "Aug 2021 - Apr 2025",
+            "cardTitle": "Bachelor's in Computer Engineering",
+            "cardSubtitle":"Brigham Young University, Provo, UT",
+            "cardDetailedText": "GPA - 3.74",
             "icon" : {
                 "src": "images/education/lorem-ipsum.png"
-            }
+            },
+            "url":"http://www.sunburst-design.com/"
+            
         },
         {
-            "title": "Apr 20XX",
-            "cardTitle": "High School",
-            "cardSubtitle":"ABC School, City",
-            "cardDetailedText": "Marks - 95%"
+            "title": "Dec 2024 - Jan 2025",
+            "cardTitle": "UVM Hardware Verification Certification",
+            "cardSubtitle":"Sunburst Design Academy",
+            "cardDetailedText": "GPA - 4.0",
+            "url": "http://www.sunburst-design.com/"
+        },
+        {
+            "title": "Jun 2023 - Sep 2023",
+            "cardTitle": "CS 50 AI",
+            "cardSubtitle":"Harvard University, Cambridge, MA",
+            "cardDetailedText": "GPA - 4.0"
+        },
+        {
+            "title": "May 2022 - Aug 2022",
+            "cardTitle": "CS 50",
+            "cardSubtitle":"Harvard University, Cambridge, MA",
+            "cardDetailedText": "GPA - 4.0"
+        },
+        {
+            "title": "Aug 2017 - Jun 2021",
+            "cardTitle": "International Bacceleraute",
+            "cardSubtitle":"Skyline High School, Salt Lake City, UT",
+            "cardDetailedText": "GPA - 3.86"
         }
     ]
 }

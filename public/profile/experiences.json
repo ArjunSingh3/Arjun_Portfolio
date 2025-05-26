@@ -1,8 +1,8 @@
 {
     "experiences": [
         {
-            "title": "Software Engineer",
-            "subtitle": "XYZ Ltd",
+            "title": "Full Chip Timing & Layout Design intern",
+            "subtitle": "Intel",
             "workType": "Full-time",
             "workDescription": [
                 "Integrated **2** new product.",
@@ -11,23 +11,43 @@
             "dateText": "06/20XX – Present"
         },
         {
-            "title": "Software Engineer",
-            "subtitle": "XYZ Ltd",
-            "workType": "Internship",
+            "title": "Head Machine Learning TA",
+            "subtitle": "BYU Electrical & Computer Engineering",
+            "workType": "Part-time",
             "workDescription": [
                 "Worked on abc."
             ],
-            "dateText": "01/20XX – 05/20XX"
+            "dateText": "01/2025 – 04/2025"
         },
         {
-            "title": "App Developer",
-            "subtitle": "ABC Pvt Ltd",
-            "workType": "Freelance",
+            "title": "Standard Cell Design & Machine Learning intern",
+            "subtitle": "Intel",
+            "workType": "Full-time",
             "workDescription": [
                 "Developed the official apps for the startup for both Android and iOS using hybrid framework.",
                 "Done bcd work."
             ],
-            "dateText": "09/20XX – 01/20YY"
+            "dateText": "05/2024 – 12/2024"
+        },
+        {
+            "title": "Process Optimization intern",
+            "subtitle": "Crowe LLP",
+            "workType": "Full-time",
+            "workDescription": [
+                "Integrated **2** new product.",
+                "Worked on adding **def** to **bcd**. Improved speed by 50%."
+            ],
+            "dateText": "06/2023 – 07/2023"
+        },
+        {
+            "title": "BYU Physics Demonstration Engineer",
+            "subtitle": "BYU Physics & Astronomy",
+            "workType": "Part-time",
+            "workDescription": [
+                "Integrated **2** new product.",
+                "Worked on adding **def** to **bcd**. Improved speed by 50%."
+            ],
+            "dateText": "04/2022 – 08/2022"
         }
     ]
 }
