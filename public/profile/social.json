@@ -2,15 +2,19 @@
     "social": [
         {
             "network" : "linkedin",
-            "href": "https://linkedin.com/"
+            "href": "https://www.linkedin.com/in/arjun-singh3/"
         },
         {
             "network" : "github",
-            "href": "https://github.com/mayankagarwal09"
+            "href": ""
         },
         {
             "network" : "email",
-            "href": "mailto:test@test.com"
+            "href": "3arjunsingh3@gmail.com"
+        },
+        {
+            "network" : "youtube",
+            "href": "3arjunsingh3@gmail.com"
         }
     ]
 }

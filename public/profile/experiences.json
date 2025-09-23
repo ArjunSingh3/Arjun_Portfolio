@@ -6,18 +6,32 @@
             "workType": "Full-time",
             "workDescription": [
                 "Integrated **2** new product.",
-                "Worked on adding **def** to **bcd**. Improved speed by 50%."
+                "Worked on adding **def** to bcd. Improved speed by 50%.Integrated **2** new product.Integrated **2** new product.Integrated **2** new product.Integrated **2** new product."
             ],
-            "dateText": "06/20XX – Present"
+            "dateText": "06/20XX – Present",
+            "media": {
+                "type": "IMAGE",
+                "source": {
+                    "url": "/images/experience/intel.gif"
+                },
+                "name": "Intel Logo"
+            }
         },
         {
             "title": "Head Machine Learning TA",
-            "subtitle": "BYU Electrical & Computer Engineering",
+            "subtitle": "BYU Electrical Engineering",
             "workType": "Part-time",
             "workDescription": [
                 "Worked on abc."
             ],
-            "dateText": "01/2025 – 04/2025"
+            "dateText": "01/2025 – 04/2025",
+            "media": {
+                "type": "IMAGE",
+                "source": {
+                    "url": "/images/education/byu_logo.jpeg"
+                },
+                "name": "Intel Logo"
+            }
         },
         {
             "title": "Standard Cell Design & Machine Learning intern",
@@ -27,7 +41,14 @@
                 "Developed the official apps for the startup for both Android and iOS using hybrid framework.",
                 "Done bcd work."
             ],
-            "dateText": "05/2024 – 12/2024"
+            "dateText": "05/2024 – 12/2024",
+            "media": {
+                "type": "IMAGE",
+                "source": {
+                    "url": "/images/experience/intel_core.gif"
+                },
+                "name": "Intel Logo"
+            }
         },
         {
             "title": "Process Optimization intern",
@@ -37,17 +58,31 @@
                 "Integrated **2** new product.",
                 "Worked on adding **def** to **bcd**. Improved speed by 50%."
             ],
-            "dateText": "06/2023 – 07/2023"
+            "dateText": "06/2023 – 07/2023",
+            "media": {
+                "type": "IMAGE",
+                "source": {
+                    "url": "/images/experience/crowe_logo.webp"
+                },
+                "name": "Intel Logo"
+            }
         },
         {
             "title": "BYU Physics Demonstration Engineer",
-            "subtitle": "BYU Physics & Astronomy",
+            "subtitle": "BYU Physics",
             "workType": "Part-time",
             "workDescription": [
                 "Integrated **2** new product.",
                 "Worked on adding **def** to **bcd**. Improved speed by 50%."
             ],
-            "dateText": "04/2022 – 08/2022"
+            "dateText": "04/2022 – 08/2022",
+            "media": {
+                "type": "IMAGE",
+                "source": {
+                    "url": "/images/experience/BYU_Logo_2.jpg"
+                },
+                "name": "Intel Logo"
+            }
         }
     ]
 }

@@ -1,40 +1,75 @@
 {
     "education":[
         {
-            "title": "Aug 2021 - Apr 2025",
-            "cardTitle": "Bachelor's in Computer Engineering",
-            "cardSubtitle":"Brigham Young University, Provo, UT",
+            "title": "Aug 2021 - Apr 2025 ",
+            "cardTitle": "Brigham Young University, UT",
+            "cardSubtitle":"Bachelor's in Computer Engineering",
             "cardDetailedText": "GPA - 3.74",
+            "location": "",
             "icon" : {
                 "src": "images/education/lorem-ipsum.png"
             },
-            "url":"http://www.sunburst-design.com/"
-            
+            "url":"http://www.sunburst-design.com/",
+            "media": {
+                "type": "IMAGE",
+                "source": {
+                    "url": "/images/education/BYU_Engineering_Building.jpg"
+                },
+                "name": "BYU Logo"
+            }
         },
         {
             "title": "Dec 2024 - Jan 2025",
-            "cardTitle": "UVM Hardware Verification Certification",
-            "cardSubtitle":"Sunburst Design Academy",
+            "cardTitle": "Sunburst Design Academy",
+            "cardSubtitle":"UVM Hardware Verification Certification",
             "cardDetailedText": "GPA - 4.0",
+            "media": {
+                "type": "IMAGE",
+                "source": {
+                    "url": "/images/education/sunburst_design_academy.jpg"
+                },
+                "name": "BYU Logo"
+            },
             "url": "http://www.sunburst-design.com/"
         },
         {
             "title": "Jun 2023 - Sep 2023",
-            "cardTitle": "CS 50 AI",
+            "cardTitle": "CS 50 Machine Learning",
             "cardSubtitle":"Harvard University, Cambridge, MA",
-            "cardDetailedText": "GPA - 4.0"
+            "cardDetailedText": "GPA - 4.0",
+            "media": {
+                "type": "IMAGE",
+                "source": {
+                    "url": "/images/education/harvard.png"
+                },
+                "name": "BYU Logo"
+            }
         },
         {
             "title": "May 2022 - Aug 2022",
-            "cardTitle": "CS 50",
+            "cardTitle": "CS 50 Full Stack Dev",
             "cardSubtitle":"Harvard University, Cambridge, MA",
-            "cardDetailedText": "GPA - 4.0"
+            "cardDetailedText": "GPA - 4.0",
+            "media": {
+                "type": "IMAGE",
+                "source": {
+                    "url": "/images/education/harvard.png"
+                },
+                "name": "BYU Logo"
+            }
         },
         {
             "title": "Aug 2017 - Jun 2021",
             "cardTitle": "International Bacceleraute",
             "cardSubtitle":"Skyline High School, Salt Lake City, UT",
-            "cardDetailedText": "GPA - 3.86"
+            "cardDetailedText": "GPA - 3.86",
+            "media": {
+                "type": "IMAGE",
+                "source": {
+                    "url": "/images/education/skyline_high_school_logo.png"
+                },
+                "name": "BYU Logo"
+            }
         }
     ]
 }
