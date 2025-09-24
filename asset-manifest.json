@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/Arjun_Portfolio/static/css/main.992d18eb.css",
+    "main.js": "/Arjun_Portfolio/static/js/main.c0529b4d.js",
+    "static/js/124.0f32ffb9.chunk.js": "/Arjun_Portfolio/static/js/124.0f32ffb9.chunk.js",
+    "static/css/56.38b2df9f.chunk.css": "/Arjun_Portfolio/static/css/56.38b2df9f.chunk.css",
+    "static/js/56.db23be3c.chunk.js": "/Arjun_Portfolio/static/js/56.db23be3c.chunk.js",
+    "static/css/353.fe9c079c.chunk.css": "/Arjun_Portfolio/static/css/353.fe9c079c.chunk.css",
+    "static/js/353.87251cf9.chunk.js": "/Arjun_Portfolio/static/js/353.87251cf9.chunk.js",
+    "static/js/660.dff304d2.chunk.js": "/Arjun_Portfolio/static/js/660.dff304d2.chunk.js",
+    "static/js/57.89d52b23.chunk.js": "/Arjun_Portfolio/static/js/57.89d52b23.chunk.js",
+    "static/js/697.31498dcd.chunk.js": "/Arjun_Portfolio/static/js/697.31498dcd.chunk.js",
+    "static/js/449.142a9f42.chunk.js": "/Arjun_Portfolio/static/js/449.142a9f42.chunk.js",
+    "static/js/453.87e45203.chunk.js": "/Arjun_Portfolio/static/js/453.87e45203.chunk.js",
+    "static/js/819.96895fb3.chunk.js": "/Arjun_Portfolio/static/js/819.96895fb3.chunk.js",
+    "static/js/712.48c2c6a1.chunk.js": "/Arjun_Portfolio/static/js/712.48c2c6a1.chunk.js",
+    "index.html": "/Arjun_Portfolio/index.html",
+    "main.992d18eb.css.map": "/Arjun_Portfolio/static/css/main.992d18eb.css.map",
+    "main.c0529b4d.js.map": "/Arjun_Portfolio/static/js/main.c0529b4d.js.map",
+    "124.0f32ffb9.chunk.js.map": "/Arjun_Portfolio/static/js/124.0f32ffb9.chunk.js.map",
+    "56.38b2df9f.chunk.css.map": "/Arjun_Portfolio/static/css/56.38b2df9f.chunk.css.map",
+    "56.db23be3c.chunk.js.map": "/Arjun_Portfolio/static/js/56.db23be3c.chunk.js.map",
+    "353.fe9c079c.chunk.css.map": "/Arjun_Portfolio/static/css/353.fe9c079c.chunk.css.map",
+    "353.87251cf9.chunk.js.map": "/Arjun_Portfolio/static/js/353.87251cf9.chunk.js.map",
+    "660.dff304d2.chunk.js.map": "/Arjun_Portfolio/static/js/660.dff304d2.chunk.js.map",
+    "57.89d52b23.chunk.js.map": "/Arjun_Portfolio/static/js/57.89d52b23.chunk.js.map",
+    "697.31498dcd.chunk.js.map": "/Arjun_Portfolio/static/js/697.31498dcd.chunk.js.map",
+    "449.142a9f42.chunk.js.map": "/Arjun_Portfolio/static/js/449.142a9f42.chunk.js.map",
+    "453.87e45203.chunk.js.map": "/Arjun_Portfolio/static/js/453.87e45203.chunk.js.map",
+    "819.96895fb3.chunk.js.map": "/Arjun_Portfolio/static/js/819.96895fb3.chunk.js.map",
+    "712.48c2c6a1.chunk.js.map": "/Arjun_Portfolio/static/js/712.48c2c6a1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.992d18eb.css",
+    "static/js/main.c0529b4d.js"
+  ]
+}

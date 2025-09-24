@@ -1,0 +1,20 @@
+{
+    "social": [
+        {
+            "network" : "linkedin",
+            "href": "https://www.linkedin.com/in/arjun-singh3/"
+        },
+        {
+            "network" : "github",
+            "href": ""
+        },
+        {
+            "network" : "email",
+            "href": "3arjunsingh3@gmail.com"
+        },
+        {
+            "network" : "youtube",
+            "href": "3arjunsingh3@gmail.com"
+        }
+    ]
+}
