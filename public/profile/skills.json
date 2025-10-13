@@ -36,10 +36,6 @@
                 {
                     "icon": "images/skills/SystemVerilog_logo.jpg",
                     "title": "SystemVerilog"
-                },
-                {
-                    "icon": "images/skills/verilogHDL.webp",
-                    "title": "verilog HDL 2001"
                 }
         ]},
         {
@@ -56,6 +52,10 @@
                 {
                     "icon": "images/skills/UVM-logo.webp",
                     "title": "UVM"
+                },
+                {
+                    "icon": "images/skills/verilogHDL.webp",
+                    "title": "verilog HDL 2001"
                 }
             ]
         },
@@ -83,7 +83,7 @@
                     "title": "Synopsys"
                 },
                 {
-                    "icon": "images/skills/Cadence-Logo.png",
+                    "icon": "images/skills/cadence_logo.png",
                     "title": "Cadence"
                 },
                 {
