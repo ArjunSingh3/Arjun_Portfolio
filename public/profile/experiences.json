@@ -5,9 +5,12 @@
             "subtitle": "Intel",
             "workType": "Full-time",
             "workDescription": [
-                "Integrated **2** new product.",
-                "Worked on adding **def** to bcd. Improved speed by 50%.Integrated **2** new product.Integrated **2** new product.Integrated **2** new product.Integrated **2** new product."
-            ],
+    "Built automation flows for reliability validation at full chip level and used **RedHawk by Ansys** to debug IR violations.",
+    "Used **Synopsys Fusion Compiler** to extract layout and timing information for RTL owners using **C++**, **TCL**, and **Python**.",
+    "Ran static timing analysis models to debug timing paths using **PrimeTime** on Intel’s next-generation processors.",
+    "Collaborated with **RTL** and **Physical Design (PD)** IP owners to resolve **max cap**, **max transition**, **setup**, and **hold** violations.",
+    "Developed **shell scripts** to build pre- and post-hooks for automating timing analysis workflows."
+],
             "dateText": "06/20XX – Present",
             "media": {
                 "type": "IMAGE",
@@ -22,8 +25,10 @@
             "subtitle": "BYU Electrical Engineering",
             "workType": "Part-time",
             "workDescription": [
-                "Worked on abc."
-            ],
+    "Taught lectures on **Ensemble Methods**, **Recurrent Neural Networks (RNNs)**, **LSTMs**, and **GRUs** to a class of 30 students.",
+    "Graded over **120 research papers** and guided students on topics such as **Decision Trees**, **Neural Networks**, **LSTMs**, and **Kernel Methods**.",
+    "Created **tutorial videos** demonstrating coding samples in **Python**, **Keras with JAX**, **Weights & Biases (WANDB)**, and **PyTorch** for model tuning and GPU acceleration."
+],
             "dateText": "01/2025 – 04/2025",
             "media": {
                 "type": "IMAGE",
@@ -38,9 +43,11 @@
             "subtitle": "Intel",
             "workType": "Full-time",
             "workDescription": [
-                "Developed the official apps for the startup for both Android and iOS using hybrid framework.",
-                "Done bcd work."
-            ],
+    "Designed an automation pipeline for **Monte Carlo (MC) simulations** using **HSpice** and **Python**, increasing efficiency by **50%**.",
+    "Debugged design behavior and **SystemVerilog assertions** for clock designs using **Verdi**.",
+    "Developed a **custom machine learning architecture** for anomaly detection to enhance the verification methodology for **Standard Cells**.",
+    "Gained hands-on experience in **Standard Cell Design and Layout** using **Cadence Virtuoso** with **Intel** and external foundries on **3nm** and **2nm** processes."
+],
             "dateText": "05/2024 – 12/2024",
             "media": {
                 "type": "IMAGE",
@@ -55,9 +62,9 @@
             "subtitle": "Crowe LLP",
             "workType": "Full-time",
             "workDescription": [
-                "Integrated **2** new product.",
-                "Worked on adding **def** to **bcd**. Improved speed by 50%."
-            ],
+    "Led an initiative to increase **automated testing by 15%** using **Python** and **Power Automate** for client auditing.",
+    "Managed **Linux servers** and large **databases**, executing complex **SQL queries** for data testing and analysis."
+],
             "dateText": "06/2023 – 07/2023",
             "media": {
                 "type": "IMAGE",
@@ -72,8 +79,8 @@
             "subtitle": "BYU Physics",
             "workType": "Part-time",
             "workDescription": [
-                "Integrated **2** new product.",
-                "Worked on adding **def** to **bcd**. Improved speed by 50%."
+                "",
+                ""
             ],
             "dateText": "04/2022 – 08/2022",
             "media": {

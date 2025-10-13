@@ -10,8 +10,12 @@
                     "title": "Java"
                 },
                 {
-                    "icon": "images/skills/php.png",
-                    "title": "PHP"
+                    "icon": "images/skills/html.png",
+                    "title": "HTML"
+                },
+                {
+                    "icon": "images/skills/c-plus-plus.svg",
+                    "title": "C++"
                 },
                 {
                     "icon": "images/skills/js.png",
@@ -24,6 +28,18 @@
                 {
                     "icon": "images/skills/mysql.png",
                     "title": "MySQL"
+                },
+                {
+                    "icon": "images/skills/tcl_logo.gif",
+                    "title": "tcl"
+                },
+                {
+                    "icon": "images/skills/SystemVerilog_logo.png",
+                    "title": "SystemVerilog"
+                },
+                {
+                    "icon": "images/skills/verilogHDL.webp",
+                    "title": "verilog HDL 2001"
                 }
         ]},
         {
@@ -38,8 +54,8 @@
                     "title": "React"
                 },
                 {
-                    "icon": "images/skills/nodejs.png",
-                    "title": "Nodejs"
+                    "icon": "images/skills/UVM-logo.webp",
+                    "title": "UVM"
                 }
             ]
         },
@@ -57,6 +73,22 @@
                 {
                     "icon": "images/skills/docker.png",
                     "title": "Docker"
+                },
+                {
+                    "icon": "images/skills/QuestaSim.png",
+                    "title": "Questa Sim"
+                },
+                {
+                    "icon": "images/skills/Synopsys_Logo.png",
+                    "title": "Synopsys"
+                },
+                {
+                    "icon": "images/skills/Cadence-Logo.png",
+                    "title": "Cadence"
+                },
+                {
+                    "icon": "images/skills/RedHawk-Ansys.webp",
+                    "title": "RedHawk"
                 }
             ]
     }
