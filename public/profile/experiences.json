@@ -11,7 +11,7 @@
     "Collaborated with **RTL** and **Physical Design (PD)** IP owners to resolve **max cap**, **max transition**, **setup**, and **hold** violations.",
     "Developed **shell scripts** to build pre- and post-hooks for automating timing analysis workflows."
 ],
-            "dateText": "06/20XX – Present",
+            "dateText": "05/2025 – Present",
             "media": {
                 "type": "IMAGE",
                 "source": {
@@ -21,8 +21,8 @@
             }
         },
         {
-            "title": "Head Machine Learning TA",
-            "subtitle": "BYU Electrical Engineering",
+            "title": "Head ML TA",
+            "subtitle": "BYU ECE",
             "workType": "Part-time",
             "workDescription": [
     "Taught lectures on **Ensemble Methods**, **Recurrent Neural Networks (RNNs)**, **LSTMs**, and **GRUs** to a class of 30 students.",
@@ -79,16 +79,16 @@
             "subtitle": "BYU Physics",
             "workType": "Part-time",
             "workDescription": [
-                "",
-                ""
-            ],
+    "Developed an in-depth understanding of over 600 demonstrations in Optics, Nuclear Physics, Electricity and Magnetism, and Newtonian Mechanics to support classroom integration and student engagement.",
+    "Collaborated with professors to select and incorporate demonstrations that enhanced conceptual understanding, and repaired or improved demonstrations as needed to ensure proper functionality."
+],
             "dateText": "04/2022 – 08/2022",
             "media": {
                 "type": "IMAGE",
                 "source": {
                     "url": "/images/experience/BYU_Logo_2.jpg"
                 },
-                "name": "Intel Logo"
+                "name": "BYU Logo"
             }
         }
     ]
