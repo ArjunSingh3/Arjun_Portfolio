@@ -9,7 +9,7 @@
             "icon" : {
                 "src": "images/education/lorem-ipsum.png"
             },
-            "url":"http://www.sunburst-design.com/",
+            "url":"https://github.com/ArjunSingh3/Personal_Website_Docs/blob/main/1_BYU_Degree.pdf",
             "media": {
                 "type": "IMAGE",
                 "source": {
@@ -30,7 +30,7 @@
                 },
                 "name": "BYU Logo"
             },
-            "url": "http://www.sunburst-design.com/"
+            "url": "https://github.com/ArjunSingh3/Personal_Website_Docs/blob/main/2_BYU-SYSTEMVERILOG%20UVM%20VERIFICATION%20TRAINING.pdf"
         },
         {
             "title": "Jun 2023 - Sep 2023",
@@ -43,7 +43,8 @@
                     "url": "/images/education/harvard.png"
                 },
                 "name": "BYU Logo"
-            }
+            },
+            "url": "https://drive.google.com/file/d/17sG8f09ncu52IzJJS_y4hRcbMw7oJ8Ys/view?usp=drive_link"
         },
         {
             "title": "May 2022 - Aug 2022",
@@ -56,7 +57,8 @@
                     "url": "/images/education/harvard.png"
                 },
                 "name": "BYU Logo"
-            }
+            },
+            "url": "https://drive.google.com/file/d/1YDUVa-ZmfNN8Qyv-coM8gv4CHgO3dDMW/view?usp=drive_link"
         },
         {
             "title": "Aug 2017 - Jun 2021",
