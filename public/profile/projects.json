@@ -34,6 +34,22 @@
       ]
     },
     {
+      "image" : "images/projects/LLM_grader_Project_Logo.jpeg",
+      "title": "LLM Grading Tool",
+      "bodyText": "- Designed an **automated grading tool** using large language models (LLMs).\n - Assisted in evaluating student submissions for consistency and correctness.\n - Improved instructor efficiency while ensuring fairness in assessment.",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/mayankagarwal09/Paginated-App-Feeds-List"
+        }
+      ],
+      "tags" : [
+        "LLMs",
+        "Automation",
+        "Education Technology"
+      ]
+    },
+    {
       "image" : "images/projects/Risc-V_Processor.svg",
       "title": "RISC-V Processor Project",
       "bodyText": "- Designed and implemented a **RISC-V processor** as part of a computer architecture course.\n - Explored instruction set architecture, pipelining, and performance trade-offs.\n - Strengthened expertise in digital design and hardware description languages.",
@@ -85,22 +101,6 @@
         "Mobile App Development",
         "Client-Server"
     ]
-    },
-    {
-      "image" : "images/projects/LLM_grader_Project_Logo.jpeg",
-      "title": "LLM Grading Tool",
-      "bodyText": "- Designed an **automated grading tool** using large language models (LLMs).\n - Assisted in evaluating student submissions for consistency and correctness.\n - Improved instructor efficiency while ensuring fairness in assessment.",
-      "links": [
-        {
-          "text": "GitHub",
-          "href": "https://github.com/mayankagarwal09/Paginated-App-Feeds-List"
-        }
-      ],
-      "tags" : [
-        "LLMs",
-        "Automation",
-        "Education Technology"
-      ]
     },
     {
       "image" : "images/projects/doorbell_Project.jpeg",
