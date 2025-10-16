@@ -1,17 +1,13 @@
 {
   "projects" : [
     {
-      "image" : "images/projects/Laser_Tag_Project.jpeg",
-      "title": "Course Development BYU",
-      "bodyText": "- Led course development projects as an **Analog Circuit Designer** at BYU.\n - Designed and implemented new lab projects impacting three courses.\n - Reduced costs by more than **$40,000**, cutting the Junior Project Lab expense from **$400 to $30**, making education more accessible.",
+      "image" : "images/projects/Current_Mirror_ASIC.jpeg",
+      "title": "Analog ASIC Design Flow",
+      "bodyText": "- Designed and simulated a **current mirror** circuit using **xschem** for bias current replication.\n - Implemented the corresponding **layout** in **Magic VLSI**, ensuring accurate device matching and parasitic minimization.\n - Verified proper connectivity between schematic and layout through **LVS** and **DRC** checks to confirm design integrity.",
       "links": [
         {
           "text": "GitHub",
           "href": "https://github.com/mayankagarwal09/dev-portfolio"
-        },
-        {
-          "text": "Live",
-          "href": "https://mayankagarwal.me"
         }
       ],
       "tags" : [
@@ -21,7 +17,7 @@
       ]
     },
     {
-      "image" : "images/projects/supermileage_car_2.png",
+      "image" : "images/projects/Supermileage_car_2.png",
       "title": "BYU Supermileage Car",
       "bodyText": "- Served as **Team Principal** and lead electronics engineer for the BYU Supermileage Team.\n - Designed custom electronics and system architecture for an ultra-efficient vehicle.\n - Achieved **1,918 miles per gallon** and won **1st place** in the Shell Eco-Marathon Internal Combustion Engine category, competing against teams across **North and South America**.",
       "links": [
@@ -54,15 +50,19 @@
       ]
     },
     {
+      "image" : "images/projects/Laser_Tag_Project.jpeg",
+      "title": "Course Development BYU",
+      "bodyText": "- Led course development projects as an **Analog Circuit Designer** at BYU.\n - Designed and implemented new lab projects impacting three courses.\n - Reduced costs by more than **$40,000**, cutting the Junior Project Lab expense from **$400 to $30**, making education more accessible.",
+      "tags" : [
+        "Analog Design",
+        "Course Development",
+        "Cost Reduction"
+      ]
+    },
+    {
       "image" : "images/projects/Escapes_In_Time_Logo.jpeg",
       "title": "Wireless Escape Room System",
       "bodyText": "- Developed a **wireless communication system** for an escape room company.\n - Designed protocols for reliable multi-device communication under real-time constraints.\n - Improved scalability and enhanced user experience in a commercial entertainment setting.",
-      "links": [
-        {
-          "text": "GitHub",
-          "href": "https://github.com/mayankagarwal09/SecureChatApp"
-        }
-      ],
       "tags" : [
         "Wireless Systems",
         "Embedded Design",
@@ -87,7 +87,7 @@
     ]
     },
     {
-      "image" : "images/projects/LLM_grader_Project_logo.jpeg",
+      "image" : "images/projects/LLM_grader_Project_Logo.jpeg",
       "title": "LLM Grading Tool",
       "bodyText": "- Designed an **automated grading tool** using large language models (LLMs).\n - Assisted in evaluating student submissions for consistency and correctness.\n - Improved instructor efficiency while ensuring fairness in assessment.",
       "links": [
@@ -110,6 +110,10 @@
         {
           "text": "GitHub",
           "href": "https://github.com/mayankagarwal09/Paginated-App-Feeds-List"
+        },
+        {
+          "text": "Youtube",
+          "href": "https://github.com/mayankagarwal09/Paginated-App-Feeds-List"
         }
       ],
       "tags" : [
@@ -124,7 +128,7 @@
       "bodyText": "- Contributed to an experimental **self-driving car platform**.\n - Worked on control systems, sensor integration, and navigation algorithms.\n - Gained experience in autonomous systems and real-time decision making.",
       "links": [
         {
-          "text": "GitHub",
+          "text": "Youtube",
           "href": "https://github.com/mayankagarwal09/Paginated-App-Feeds-List"
         }
       ],
