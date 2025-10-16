@@ -4,12 +4,7 @@
       "image" : "images/projects/Current_Mirror_ASIC.jpeg",
       "title": "Analog ASIC Design Flow",
       "bodyText": "- Designed and simulated a **current mirror** circuit using **xschem** for bias current replication.\n - Implemented the corresponding **layout** in **Magic VLSI**, ensuring accurate device matching and parasitic minimization.\n - Verified proper connectivity between schematic and layout through **LVS** and **DRC** checks to confirm design integrity.",
-      "links": [
-        {
-          "text": "GitHub",
-          "href": "https://github.com/mayankagarwal09/dev-portfolio"
-        }
-      ],
+      
       "tags" : [
         "Analog Design",
         "Course Development",
@@ -20,12 +15,7 @@
       "image" : "images/projects/Supermilleage.jpeg",
       "title": "BYU Supermileage Car",
       "bodyText": "- Served as **Team Principal** and lead electronics engineer for the BYU Supermileage Team.\n - Designed custom electronics and system architecture for an ultra-efficient vehicle.\n - Achieved **1,918 miles per gallon** and won **1st place** in the Shell Eco-Marathon Internal Combustion Engine category, competing against teams across **North and South America**.",
-      "links": [
-        {
-          "text": "Competition",
-          "href": "https://www.shell.com/energy-and-innovation/shell-ecomarathon.html"
-        }
-      ],
+      
       "tags" : [
         "Electronics",
         "Embedded Systems",
@@ -37,12 +27,7 @@
       "image" : "images/projects/LLM_grader_Project_Logo.jpeg",
       "title": "LLM Grading Tool",
       "bodyText": "- Designed an **automated grading tool** using large language models (LLMs).\n - Assisted in evaluating student submissions for consistency and correctness.\n - Improved instructor efficiency while ensuring fairness in assessment.",
-      "links": [
-        {
-          "text": "GitHub",
-          "href": "https://github.com/mayankagarwal09/Paginated-App-Feeds-List"
-        }
-      ],
+      
       "tags" : [
         "LLMs",
         "Automation",
@@ -53,12 +38,6 @@
       "image" : "images/projects/Risc-V_Processor.svg",
       "title": "RISC-V Processor Project",
       "bodyText": "- Designed and implemented a **RISC-V processor** as part of a computer architecture course.\n - Explored instruction set architecture, pipelining, and performance trade-offs.\n - Strengthened expertise in digital design and hardware description languages.",
-      "links": [
-        {
-          "text": "GitHub",
-          "href": "https://github.com/mayankagarwal09/QuietHours-Android"
-        }
-      ],
       "tags" : [
         "RISC-V",
         "Computer Architecture",
@@ -89,12 +68,7 @@
     "image" : "images/projects/Android_Project_Logo.png",
     "title": "Family Map Android Mobile App",
     "bodyText": "- Developed an **Android mobile app** in Java as part of a software engineering course.\n - Implemented a family history mapping system with an interactive UI and backend integration.\n - Focused on efficient client–server communication and user-friendly design.",
-    "links": [
-        {
-        "text": "GitHub",
-        "href": "https://github.com/mayankagarwal09/mvvm-sample-app"
-        }
-    ],
+    
     "tags" : [
         "Java",
         "Android",
@@ -106,16 +80,7 @@
       "image" : "images/projects/doorbell_Project.jpeg",
       "title": "Smart Doorbell Project",
       "bodyText": "- Built a **smart doorbell system** with integrated sensors and microcontrollers.\n - Implemented low-power operation and wireless notifications.\n - Designed hardware and software for reliability in real-world conditions.",
-      "links": [
-        {
-          "text": "GitHub",
-          "href": "https://github.com/mayankagarwal09/Paginated-App-Feeds-List"
-        },
-        {
-          "text": "Youtube",
-          "href": "https://github.com/mayankagarwal09/Paginated-App-Feeds-List"
-        }
-      ],
+      
       "tags" : [
         "IoT",
         "Embedded Systems",
@@ -126,12 +91,7 @@
       "image" : "images/projects/Self_Driving_Car.jpeg",
       "title": "Self-Driving Car Project",
       "bodyText": "- Contributed to an experimental **self-driving car platform**.\n - Worked on control systems, sensor integration, and navigation algorithms.\n - Gained experience in autonomous systems and real-time decision making.",
-      "links": [
-        {
-          "text": "Youtube",
-          "href": "https://github.com/mayankagarwal09/Paginated-App-Feeds-List"
-        }
-      ],
+      
       "tags" : [
         "Autonomous Systems",
         "Control",
