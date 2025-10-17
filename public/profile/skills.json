@@ -42,7 +42,7 @@
             "title": "Frameworks & Technologies",
             "items" : [
                 {
-                    "icon": "images/skills/PyTorch_Logo.webp",
+                    "icon": "images/skills/PyTorch_Logo.avif",
                     "title": "PyTorch"
                 },
                 {
@@ -51,7 +51,7 @@
                 },
                 {
                     "icon": "images/skills/TensorFlowLogo.png",
-                    "title": "TensorFlow"
+                    "title": ""
                 },
                 {
                     "icon": "images/skills/android_new.png",
