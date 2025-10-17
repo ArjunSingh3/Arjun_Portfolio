@@ -42,6 +42,18 @@
             "title": "Frameworks & Technologies",
             "items" : [
                 {
+                    "icon": "images/skills/PyTorch_Logo.webp",
+                    "title": "PyTorch"
+                },
+                {
+                    "icon": "images/skills/Scikit_Learn_Logo.png",
+                    "title": "Scikit-Learn"
+                },
+                {
+                    "icon": "images/skills/TensorFlowLogo.png",
+                    "title": "TensorFlow"
+                },
+                {
                     "icon": "images/skills/android_new.png",
                     "title": "Android"
                 },
