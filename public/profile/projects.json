@@ -2,7 +2,7 @@
   "projects" : [
     {
       "image" : "images/projects/Current_Mirror_ASIC.jpeg",
-      "title": "Analog ASIC Design Flow",
+      "title": "Open Source ASIC Design Flow",
       "bodyText": "- Designed and simulated a **current mirror** circuit using **xschem** for bias current replication.\n - Implemented the corresponding **layout** in **Magic VLSI**, ensuring accurate device matching and parasitic minimization.\n - Verified proper connectivity between schematic and layout through **LVS** and **DRC** checks to confirm design integrity.",
       
       "tags" : [
