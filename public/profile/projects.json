@@ -77,7 +77,7 @@
     ]
     },
     {
-      "image" : "images/projects/doorbell_Project.jpeg",
+      "image" : "images/projects/Ring_Doorbell.jpeg",
       "title": "Smart Doorbell Project",
       "bodyText": "- Built a **smart doorbell system** with integrated sensors and microcontrollers.\n - Implemented low-power operation and wireless notifications.\n - Designed hardware and software for reliability in real-world conditions.",
       
