@@ -1,563 +1,175 @@
-# Dev Portfolio  [![GitHub](https://img.shields.io/github/license/mayankagarwal09/dev-portfolio?color=blue)](https://github.com/mayankagarwal09/dev-portfolio/blob/master/LICENSE.md) ![visitors](https://visitor-badge.glitch.me/badge?page_id=mayankagarwal09.dev-portfolio&color=blue)
+# Arjun Singh — Portfolio
 
-## A minimal portfolio template for Developers!
+A personal portfolio site with a "sunset" design system: a persistent animated
+gradient-sky background, glassmorphism navigation, smooth page transitions,
+and custom-built timelines — all still driven by simple JSON files so content
+can be updated without touching any code.
 
-<h2 align="center">
-  <img src="https://github.com/mayankagarwal09/dev-portfolio/blob/master/images/dev-portfolio.gif" alt="Dev Portfolio" />
-  <br>
-</h2>
+Originally based on the [Dev Portfolio](https://github.com/mayankagarwal09/dev-portfolio)
+template by Mayank Agarwal (MIT licensed, see `LICENSE.md`), since substantially
+redesigned and rebuilt.
 
-## Features
+## Stack
 
-⚡️ Modern UI Design + Reveal Animations\
-⚡️ Made with React\
-⚡️ Fully Responsive\
-⚡️ Easily Customizable\
-⚡️ Well organized documentation
+- React 18 + `react-router-dom` v5
+- `styled-components` for theming and component styles
+- `framer-motion` for page transitions, scroll reveals, and micro-interactions
+- Data-driven content: every section fetches its copy from `public/profile/*.json` at runtime
 
-## Demo
-
-To view the demo: **[click here](https://dev-portfolio-mayankagarwal09.vercel.app)**
-
-## Why do you need a portfolio? ☝️
-
-- Professional way to showcase your work
-- Increases your visibility and online presence
-- better chance of getting work opportunity
-
----
-
-## Getting Started 🚀
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites 📋
-
-You'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [NPM](http://npmjs.com)) installed on your computer.
-
-Also, you can use [Yarn](https://yarnpkg.com/) instead of NPM ☝️
-
-## Setup 🔧
-
-From your command line, first clone Dev Portfolio:
-
-```bash
-# Clone the repository
-$ git clone https://github.com/mayankagarwal09/dev-portfolio
-
-# Move into the repository
-$ cd dev-portfolio
-
-# Remove the current origin repository
-$ git remote remove origin
-```
-
-After that, you can install the dependencies either using NPM or Yarn.
-
-Using NPM: Simply run the below commands.
+## Getting started
 
 ```bash
 # Install dependencies
-$ npm install --legacy-peer-deps
+npm install
 
-# Force audit fix
-$ npm audit fix --force
-
-# Start the development server
-$ npm start
+# Start the dev server
+npm start
 ```
 
-Using Yarn: Be aware of that you'll need to delete the `package-lock.json` file if exists before executing the below commands.
+Then open `http://localhost:3000`.
 
 ```bash
-# Install dependencies
-$ yarn
-
-# Start the development server
-$ yarn start
+# Production build
+npm run build
 ```
-
-Once your server has started, go to this url `http://localhost:3000/` to see the portfolio locally.
-The page will reload if you make edits.
 
 ---
 
-## Customization Instructions:
+## Customizing content
 
-### Step 1 - DATA & IMAGES
+All content lives in `public/profile/*.json` — edit these and refresh, no
+rebuild of components required. Images live in `public/images/`.
 
-All customizable files are inside the `public/` folder, organised mainly into `public/images/` and `public/profile/`.
-- `public/images` contains all the image assets that can be customized on website
-- `public/profile` contains all text and info inside json files that can be customized according to need
-
-### (1) NavBar
-
-- Open `public/profile/navbar.json` 
-It has 2 keys, *logo* and *sections*.
-
-```
-{
-    "logo" : {
-        "source": "images/logo.png",
-        "height" : 45,
-        "width" : 50
-    },
-    "sections": [
-        {
-            "title": "Home",
-            "href": "/"
-        },
-        {
-            "title": "About",
-            "href": "/about"
-        },
-        {
-            "title": "Skills",
-            "href": "/skills"
-        },
-        {
-            "title": "Education",
-            "href": "/education"
-        },
-        {
-            "title": "Experience",
-            "href": "/experience"
-        },
-        {
-            "title": "Projects",
-            "href": "/projects"
-        },
-        {
-            "title": "Resume",
-            "href": "https://drive.google.com/file/d/13kaPsdMNDsM4LV9g7m5-E5PTildp-yYf/view?usp=sharing",
-            "type": "link"
-        }
-    ]
-}
-```
+### Navbar — `public/profile/navbar.json`
 
 | key | Description |
-| ----------- | ----------- |
-| logo | image you want to show as brand image on NavBar. It can be also be a simple logo with just your intitials|
-| logo.source | path to the logo image |
-| logo.height | height of logo |
-| logo.width | width of logo |
-| sections | array of sections that you want to show on Navbar as links | 
-| sections.title | title of the section | 
-| sections.href | link to that section. Same as *path* mentioned in `routes.json` | 
-| sections.type | Opens in a new tab if value is *link*. `optional` field | 
+| --- | --- |
+| `logo.source` | path to the logo image shown in the nav |
+| `sections` | array of nav links |
+| `sections[].title` | link label |
+| `sections[].href` | route (must match a `path` in `routes.json`) or external URL |
+| `sections[].type` | set to `"link"` for an external link (e.g. Resume) — opens in a new tab and renders as the filled CTA pill |
 
-### (2) Routes
-- open `public/profile/routes.json`
-
-```
-{
-    "sections": [
-        {
-            "component": "About",
-            "path": "/about",
-            "headerTitle": "About"
-        },
-        {
-            "component": "Skills",
-            "path": "/skills",
-            "headerTitle": "Skills"
-        },
-        {
-            "component": "Education",
-            "path": "/education",
-            "headerTitle": "Education"
-        },
-        {
-            "component": "Experience",
-            "path": "/experience",
-            "headerTitle": "Experience"
-        },
-        {
-            "component": "Projects",
-            "path": "/projects",
-            "headerTitle": "Projects"
-        }
-    ]
-}
-```
+### Routes — `public/profile/routes.json`
 
 | key | Description |
-| ----------- | ----------- |
-| sections | array of sections that you want to create route for | 
-| sections.component | name of the Component. No need to change it unless you want to customize the entire Component. | 
-| sections.path | route for the particular section. this is the path where the particular section will be accessible | 
-| sections.headerTitle | title to be shown on the top of that section page | 
+| --- | --- |
+| `sections[].component` | name of the component in `src/components/` to render |
+| `sections[].path` | URL path for that section |
+| `sections[].headerTitle` | title shown at the top of the page |
 
-- For component customization, create a component of your own inside `src/components/` and use name of that component here.
-
-### (3) Home Section
-
-#### Home Info
-- open `public/profile/home.json`
-
-```
-{
-    "name": "Your Name",
-    "roles": ["a Developer", "a Freelancer"]
-}
-```
+### Home — `public/profile/home.json`
 
 | key | Description |
-| ----------- | ----------- |
-| name | your name | 
-| roles | string array separated by `,`. mention your roles here | 
+| --- | --- |
+| `name` | your name, shown large with the gradient treatment |
+| `roles` | array of strings the typewriter cycles through |
 
-#### Social Links
-- open `public/profile/social.json`
+### Social links — `public/profile/social.json`
 
-```
-{
-    "social": [
-        {
-            "network" : "linkedin",
-            "href": "https://linkedin.com/"
-        },
-        {
-            "network" : "github",
-            "href": "https://github.com/"
-        },
-        {
-            "network" : "email",
-            "href": "mailto:test@test.com"
-        }
-    ]
-}
-```
+Array of `{ "network": "...", "href": "..." }`. Network names must match
+[react-social-icons](https://jaketrent.github.io/react-social-icons/).
+
+### About — `public/profile/about.json`
 
 | key | Description |
-| ----------- | ----------- |
-| social | array of social links | 
-| social.network | network name as provided in [react-social-icons](https://jaketrent.github.io/react-social-icons/) |
-| social.href | link for particular social network |
+| --- | --- |
+| `about` | markdown-supported bio text |
+| `imageSource` | portrait image (portrait orientation works best, ~3:4) |
 
-- we are using [react-social-icons](https://jaketrent.github.io/react-social-icons/) here. you can visit it to see all available social icons to use
+### Skills — `public/profile/skills.json`
 
-### (4) About Section
+Grouped into categories, each with an array of `{ icon, title }` chips. Many
+existing icons are already in `public/images/skills/`.
 
-- open `public/profile/about.json`
-
-```
-{
-    "about": " This is where you can describe about **yourself**.",
-    "imageSource": "images/about/profile.png"
-    
-}
-```
+### Education — `public/profile/education.json`
 
 | key | Description |
-| ----------- | ----------- |
-| about | write about yourself, your works and goals here. `markdown` supported | 
-| imageSource | path to your profile image. (recommended size 400 x 450) |
+| --- | --- |
+| `title` | date range shown on the badge |
+| `cardTitle` | degree / program |
+| `cardSubtitle` | institution |
+| `cardDetailedText` | extra detail (GPA, etc.) |
+| `media.source.url` | thumbnail image on the card |
+| `url` | optional link (e.g. "View certificate") |
 
-### (5) Skills Section
+Renders as an alternating vertical timeline on desktop, single column on mobile.
 
-- open `public/profile/skills.json`
-
-```
-{
-    "intro": "I love to learn new things and experiment with new technologies.\nThese are some of the major languages, technologies, tools and platforms I have worked with:",
-    "skills": [{
-     
-            "title": "Languages",
-            "items" : [
-     
-                {
-                    "icon": "images/skills/java.png",
-                    "title": "Java"
-                },
-                {
-                    "icon": "images/skills/js.png",
-                    "title": "JavaScript"
-                }
-        ]},
-        {
-            "title": "Frameworks & Technologies",
-            "items" : [
-                {
-                    "icon": "images/skills/react.png",
-                    "title": "React"
-                }
-            ]
-        },
-        {
-            "title" : "Tools & Platforms",
-            "items": [
-                {
-                    "icon": "images/skills/git.png",
-                    "title": "Git"
-                }
-            ]
-    }
-]}
-```
+### Experience — `public/profile/experiences.json`
 
 | key | Description |
-| ----------- | ----------- |
-| intro | small introduction line related to your skills. `markdown` supported | 
-| skills | array containing skills under different categories |
-| skills.title | title for category under which you want to list particular skills |
-| skills.items | array containing skills for this category |
-| skills.items.icon | path to skill logo |
-| skills.items.title | title of skill |
+| --- | --- |
+| `title` | role title |
+| `subtitle` | company/organization |
+| `workType` | e.g. Full-time, Internship (optional) |
+| `workDescription` | array of markdown bullet points |
+| `dateText` | date range badge |
+| `media.source.url` | logo/image shown on the card |
 
-- many pre existing skill logos are available inside `public/images/skills`.
-
-### (6) Education Section
-
-- open `public/profile/education.json`
-
-```
-{
-    "education":[
-        {
-            "title": "Jun 20XX - Jun 20YY",
-            "cardTitle": "B.Tech, Computer Science",
-            "cardSubtitle":"XYZ University, City",
-            "cardDetailedText": "CGPA - 9.5",
-            "icon" : {
-                "src": "images/education/lorem-ipsum.png"
-            }
-        },
-        {
-            "title": "Apr 20XX",
-            "cardTitle": "High School",
-            "cardSubtitle":"ABC School, City",
-            "cardDetailedText": "Marks - 95%"
-        }
-    ]
-}
-```
+### Projects — `public/profile/projects.json`
 
 | key | Description |
-| ----------- | ----------- |
-| education | array containing education history of a person | 
-| education.title | date range during which this education was pursued or passing date |
-| education.cardTitle | degree or course name |
-| education.cardSubtitle | school or institute name |
-| education.cardDetailedText | extra info such as marks or cgpa |
-| education.icon | icon shown on the timeline. `optional` field|
-| education.icon.src | path to icon |
+| --- | --- |
+| `image` | project thumbnail (optional) |
+| `title` | project name |
+| `bodyText` | markdown description |
+| `links[]` | optional buttons (e.g. GitHub, Live) |
+| `tags[]` | pill tags shown in the card footer |
 
-### (7) Experience Section
+---
 
-- open `public/profile/experiences.json`
+## Customizing the look
 
-```
-{
-    "experiences": [
-        {
-            "title": "Software Engineer",
-            "subtitle": "XYZ Ltd",
-            "workType": "Full-time",
-            "workDescription": [
-                "Integrated **2** new product.",
-                "Worked on adding **def** to **bcd**. Improved speed by 50%."
-            ],
-            "dateText": "06/20XX – Present"
-        },
-        {
-            "title": "Software Engineer",
-            "subtitle": "XYZ Ltd",
-            "workType": "Internship",
-            "workDescription": [
-                "Worked on abc."
-            ],
-            "dateText": "01/20XX – 05/20XX"
-        },
-        {
-            "title": "App Developer",
-            "subtitle": "ABC Pvt Ltd",
-            "workType": "Freelance",
-            "workDescription": [
-                "Developed the official apps for the startup for both Android and iOS using hybrid framework.",
-                "Done bcd work."
-            ],
-            "dateText": "09/20XX – 01/20YY"
-        }
-    ]
-}
-```
+### Colors, fonts, and design tokens
 
-| key | Description |
-| ----------- | ----------- |
-| experiences | array containing work experiences of a person | 
-| experiences.title | role or designation title |
-| experiences.subtitle | company or organization name. `optional` field |
-| experiences.workType | type of work experience. example - internship, freelance, full-time. `optional` field |
-| experiences.workDescription | string array to highlight specific points related to that work experiece. `markdown` supported |
-| experiences.dateText | date range text during which particular work experience was pursued. |
+Edit `src/theme/themes.js`. There are two variants — `darkTheme` ("dusk") and
+`lightTheme` ("dawn") — sharing the same token shape:
 
-### (8) Projects Section
-
-- open `public/profile/projects.json`
-
-```
-{
-    "projects" : [
-        {
-            "image" : "images/projects/portfolio-poster.png",
-            "title": "Dev Portfolio",
-            "bodyText": "- Developer Portfolio Website made in React\n -  Fully customisable and dynamic, easily change data and images.\n - Dark Mode Support",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/dev-portfolio"
-                },
-                {
-                    "text": "Live",
-                    "href": "https://mayankagarwal.me"
-                }
-            ],
-            "tags" : [
-                "React",
-                "Portfolio",
-                "JavaScript"
-            ]
-        },
-        {
-            "title": "MVVM Sample App",
-            "bodyText": "- An Android App that loads data from mock API and show in both **LinearLayout** and **GridLayout RecyclerView**.\n - Offline support using **Room** DB and **NetworkBoundResource**.\n - Uses the **MVVM** architecture.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/mvvm-sample-app"
-                }
-            ],
-            "tags" : [
-                "Kotlin",
-                "Android",
-                "MVVM",
-                "Room",
-                "Coroutines",
-                "Flow",
-                "Hilt-Dagger",
-                "NetworkBoundResource"
-            ]
-        },
-        {
-            "title": "Task Tracker",
-            "bodyText": "- A simple Task Tracker web app made with **Angular 12**.\n - Uses **mock JSON server** to get, add, delete or update tasks.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/task-tracker-app"
-                }
-            ],
-            "tags" : [
-                "TypeScript",
-                "Angular 12",
-                "JavaScript"
-            ]
-        }
-    ]
-}
-```
-
-
-| key | Description |
-| ----------- | ----------- |
-| projects | array containing projects information |
-| projects.image | add project poster here. `optional` field. |
-| projects.title | title of the project |
-| projects.bodyText | description of project. `markdown` supported |
-| projects.links | clickable links related to the project. `optional` field |
-| projects.links.text | title of link to display |
-| projects.links.href | actual link to be redirected to on click of the button |
-| projects.tags | string array containing tags related to projects. `optional` field | 
-
-### (9) Resume Section
-
-- It is a clickable link which opens the link provided (generally drive link of resume file) in the navbar.json under Resume.
-
-
-### Step 2 - STYLES
-
-Change the color theme of the website -
-
-Go to `/src/theme/themes.js` and change the values of the required components both under lightTheme and darkTheme with your prefered HEX color.
-
-
-```theme
-//Default Values
-export const lightTheme = {
-  background: '#fff',
-  color: '#121212',
-  accentColor: '#3D84C6',
-  chronoTheme: {
-    cardBgColor: 'white',
-    cardForeColor: 'black',
-    titleColor: 'white',
-  },
-  timelineLineColor: '#ccc',
-  cardBackground: '#fff',
-  cardFooterBackground: '#f7f7f7',
-  cardBorderColor: '#00000020',
-  navbarTheme: {
-    linkColor: '#dedede',
-    linkHoverColor: '#fefefe',
-    linkActiveColor: '#fefefe',
-  },
-  bsPrimaryVariant: 'light',
-  bsSecondaryVariant: 'dark',
-  socialIconBgColor: '#121212',
-};
-
+```js
 export const darkTheme = {
-  background: '#121212',
-  color: '#eee',
-  accentColor: '#3D84C6',
-  chronoTheme: {
-    cardBgColor: '#1B1B1B',
-    cardForeColor: '#eee',
-    titleColor: 'black',
-  },
-  timelineLineColor: '#444',
-  cardBackground: '#060606',
-  cardFooterBackground: '#181818',
-  cardBorderColor: '#ffffff20',
-  navbarTheme: {
-    linkColor: '#dedede',
-    linkHoverColor: '#fefefe',
-    linkActiveColor: '#fefefe',
-  },
-  bsPrimaryVariant: 'dark',
-  bsSecondaryVariant: 'light',
-  socialIconBgColor: '#fefefe',
+  background: '#12101a',
+  color: '#f4ece2',
+  accentColor: '#ff8a5c',
+  accentGradient: 'linear-gradient(120deg, #ff8a5c 0%, #ff6f91 45%, #a3548c 100%)',
+  skyTop: '#171225',
+  skyMid: '#4a2545',
+  // ...see the file for the full token list
 };
-
 ```
 
-### Step 3 - EXTRA
+The animated background gradient itself lives in
+`src/components/SunsetBackground.jsx` and reads `skyTop` / `skyMid` /
+`skyGlowA-C` / `horizon` from the active theme, so changing those tokens
+re-colors the whole backdrop.
 
-Go to `public/index.html`. Change *title* and *logo* if you want to customize it.
+### Fonts
+
+Loaded via Google Fonts in `public/index.html` (`Fraunces` for headings,
+`Manrope` for body text) and referenced in `src/theme/themes.js`.
+
+### Timelines
+
+Education and Experience both build on the shared primitives in
+`src/components/timeline/TimelineParts.jsx` (the gradient line, glowing dots,
+glass card shell) rather than a third-party timeline library, so both stay
+visually consistent and are easy to restyle in one place.
+
+### Page title / favicon
+
+Edit `public/index.html` (title, meta description) and swap
+`public/images/logo.png` for the favicon/nav logo.
 
 ---
 
-## Deployment 📦
+## Deployment
 
-Once you finish your setup. You need to put your website online!
+Any static host works (Vercel, Netlify, GitHub Pages). For GitHub Pages, the
+existing `gh-pages` dev dependency is wired up:
 
-I highly recommend to use [Vercel](https://vercel.app) because it is super easy.
+```bash
+npm run deploy
+```
 
-## Notable Portfolios made using this template
+## License
 
-- [Mayank Agarwal](https://mayankagarwal09.com)
-
-## Authors
-
-- **Mayank Agarwal** - [https://github.com/mayankagarwal09](https://github.com/mayankagarwal09)
-
-## Support
-
-If you find a bug, feel free to [open an issue](https://github.com/mayankagarwal09/dev-portfolio/issues) in this repository.
-
-## License 📄
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
+MIT — see `LICENSE.md`. Original template © Mayank Agarwal.

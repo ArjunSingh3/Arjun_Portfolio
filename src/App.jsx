@@ -1,22 +1,22 @@
 import React from 'react';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import useDarkMode from 'use-dark-mode';
 import AppContext from './AppContext';
 import MainApp from './MainApp';
 import GlobalStyles from './theme/GlobalStyles';
+import SunsetBackground from './components/SunsetBackground';
+import useSunsetMode from './hooks/useSunsetMode';
 import { lightTheme, darkTheme } from './theme/themes';
 
 function App() {
-  window.matchMedia = null;
-  const darkMode = useDarkMode(true);
+  const sunset = useSunsetMode();
 
   return (
-    <AppContext.Provider value={{ darkMode }}>
-      <ThemeProvider theme={darkMode.value ? darkTheme : lightTheme}>
+    <AppContext.Provider value={{ sunset }}>
+      <ThemeProvider theme={sunset.isDusk ? darkTheme : lightTheme}>
         <GlobalStyles />
+        <SunsetBackground />
         <div className="App">
           <BrowserRouter>
             <MainApp />

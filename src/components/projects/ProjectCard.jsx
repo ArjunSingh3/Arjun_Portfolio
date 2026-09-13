@@ -1,93 +1,164 @@
-import React, { useContext } from 'react';
-import {
-  Button, Card, Badge, Col,
-} from 'react-bootstrap';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeContext } from 'styled-components';
 import ReactMarkdown from 'react-markdown';
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-const styles = {
-  badgeStyle: {
-    paddingLeft: 10,
-    paddingRight: 10,
-    paddingTop: 5,
-    paddingBottom: 5,
-    margin: 5,
-  },
-  cardStyle: {
-    borderRadius: 10,
-  },
-  cardTitleStyle: {
-    fontSize: 24,
-    fontWeight: 700,
-  },
-  cardTextStyle: {
-    textAlign: 'left',
-  },
-  linkStyle: {
-    textDecoration: 'none',
-    padding: 10,
-  },
-  buttonStyle: {
-    margin: 5,
-  },
-};
+const CardShell = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border-radius: ${({ theme }) => theme.radiusMd};
+  background: ${({ theme }) => theme.cardBackground};
+  border: 1px solid ${({ theme }) => theme.cardBorderColor};
+  backdrop-filter: blur(${({ theme }) => theme.glassBlur});
+  -webkit-backdrop-filter: blur(${({ theme }) => theme.glassBlur});
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 
-const ProjectCard = (props) => {
-  const theme = useContext(ThemeContext);
-  const parseBodyText = (text) => <ReactMarkdown children={text} />;
+  &:hover {
+    transform: translateY(-6px);
+    border-color: ${({ theme }) => theme.accentColor}55;
+    box-shadow: 0 22px 46px ${({ theme }) => theme.shadowColor};
+  }
+`;
 
+const ImageFrame = styled.div`
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+
+  ${CardShell}:hover & {
+    transform: scale(1.06);
+  }
+`;
+
+const Body = styled.div`
+  padding: 20px 22px 8px;
+  flex: 1;
+`;
+
+const Title = styled.h3`
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 10px;
+  color: ${({ theme }) => theme.color};
+`;
+
+const BodyText = styled.div`
+  font-size: 0.92rem;
+  color: ${({ theme }) => theme.secondaryText};
+  text-align: left;
+
+  ul {
+    margin: 0;
+    padding-left: 18px;
+  }
+
+  li {
+    margin-bottom: 6px;
+    line-height: 1.55;
+  }
+
+  strong {
+    color: ${({ theme }) => theme.color};
+  }
+`;
+
+const LinksRow = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 22px 4px;
+`;
+
+const LinkButton = styled.button`
+  padding: 7px 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: 999px;
+  border: 1px solid ${({ theme }) => theme.accentColor};
+  color: ${({ theme }) => theme.accentColor};
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: ${({ theme }) => theme.accentColor};
+    color: #fff;
+  }
+`;
+
+const Footer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 16px 22px 22px;
+`;
+
+const Tag = styled.span`
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  color: ${({ theme }) => theme.chipColor};
+  background: ${({ theme }) => theme.chipBackground};
+`;
+
+function ProjectCard(props) {
   const { project } = props;
 
   return (
-    <Col>
-      <Card
-        style={{
-          ...styles.cardStyle,
-          backgroundColor: theme.cardBackground,
-          borderColor: theme.cardBorderColor,
-        }}
-        text={theme.bsSecondaryVariant}
-      >
-        <Card.Img variant="top" src={project?.image} />
-        <Card.Body>
-          <Card.Title style={styles.cardTitleStyle}>{project.title}</Card.Title>
-          <Card.Text style={styles.cardTextStyle}>
-            {parseBodyText(project.bodyText)}
-          </Card.Text>
-        </Card.Body>
+    <CardShell
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-40px' }}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+    >
+      {project.image && (
+        <ImageFrame>
+          <Image src={project.image} alt={project.title} loading="lazy" />
+        </ImageFrame>
+      )}
+      <Body>
+        <Title>{project.title}</Title>
+        <BodyText>
+          <ReactMarkdown>{project.bodyText}</ReactMarkdown>
+        </BodyText>
+      </Body>
 
-        <Card.Body>
-          {project?.links?.map((link) => (
-            <Button
+      {project.links && project.links.length > 0 && (
+        <LinksRow>
+          {project.links.map((link) => (
+            <LinkButton
               key={link.href}
-              style={styles.buttonStyle}
-              variant={'outline-' + theme.bsSecondaryVariant}
-              onClick={() => window.open(link.href, '_blank')}
+              type="button"
+              onClick={() => window.open(link.href, '_blank', 'noopener')}
             >
               {link.text}
-            </Button>
+            </LinkButton>
           ))}
-        </Card.Body>
-        {project.tags && (
-          <Card.Footer style={{ backgroundColor: theme.cardFooterBackground }}>
-            {project.tags.map((tag) => (
-              <Badge
-                key={tag}
-                pill
-                bg={theme.bsSecondaryVariant}
-                text={theme.bsPrimaryVariant}
-                style={styles.badgeStyle}
-              >
-                {tag}
-              </Badge>
-            ))}
-          </Card.Footer>
-        )}
-      </Card>
-    </Col>
+        </LinksRow>
+      )}
+
+      {project.tags && project.tags.length > 0 && (
+        <Footer>
+          {project.tags.map((tag) => (
+            <Tag key={tag}>{tag}</Tag>
+          ))}
+        </Footer>
+      )}
+    </CardShell>
   );
-};
+}
 
 ProjectCard.propTypes = {
   project: PropTypes.shape({

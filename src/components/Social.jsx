@@ -1,15 +1,25 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { SocialIcon } from 'react-social-icons';
-import { ThemeContext } from 'styled-components';
+import styled, { ThemeContext } from 'styled-components';
 import endpoints from '../constants/endpoints';
 
-const styles = {
-  iconStyle: {
-    marginLeft: 10,
-    marginRight: 10,
-    marginBottom: 10,
-  },
-};
+const Row = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+`;
+
+const IconFrame = styled.div`
+  border-radius: 50%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+
+  &:hover {
+    transform: translateY(-3px) scale(1.06);
+    box-shadow: 0 10px 24px ${({ theme }) => theme.shadowColor};
+  }
+`;
 
 function Social() {
   const theme = useContext(ThemeContext);
@@ -25,19 +35,20 @@ function Social() {
   }, []);
 
   return (
-    <div className="social">
+    <Row>
       {data ? data.social.map((social) => (
-        <SocialIcon
-          key={social.network}
-          style={styles.iconStyle}
-          url={social.href}
-          network={social.network}
-          bgColor={theme.socialIconBgColor}
-          target="_blank"
-          rel="noopener"
-        />
+        <IconFrame key={social.network}>
+          <SocialIcon
+            url={social.href}
+            network={social.network}
+            bgColor={theme.socialIconBgColor}
+            style={{ width: 42, height: 42 }}
+            target="_blank"
+            rel="noopener"
+          />
+        </IconFrame>
       )) : null}
-    </div>
+    </Row>
   );
 }
 

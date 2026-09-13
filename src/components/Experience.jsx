@@ -1,16 +1,93 @@
-import React, { useEffect, useState, useContext } from 'react';
-import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
-import { Container } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import PropTypes from 'prop-types';
-import { ThemeContext } from 'styled-components';
+import styled from 'styled-components';
 import Header from './Header';
 import endpoints from '../constants/endpoints';
 import FallbackSpinner from './FallbackSpinner';
-import '../css/experience.css';
+import {
+  TimelineTrack, Row, DotCol, Dot, ContentCol, Card, DateBadge, cardEnterVariants,
+} from './timeline/TimelineParts';
+
+const Section = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 24px 110px;
+`;
+
+const TopRow = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+`;
+
+const TitleBlock = styled.div`
+  flex: 1;
+  min-width: 220px;
+`;
+
+const ItemTitle = styled.h3`
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: ${({ theme }) => theme.color};
+`;
+
+const SubtitleRow = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-size: 0.92rem;
+`;
+
+const SubtitleAccent = styled.span`
+  font-weight: 600;
+  color: ${({ theme }) => theme.accentColor};
+`;
+
+const WorkType = styled.span`
+  color: ${({ theme }) => theme.mutedText};
+`;
+
+const MediaImg = styled.img`
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+  border-radius: ${({ theme }) => theme.radiusSm};
+  background: ${({ theme }) => theme.backgroundElevated};
+  padding: 8px;
+  flex-shrink: 0;
+`;
+
+const DescriptionTitle = styled.h4`
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: ${({ theme }) => theme.accentColor};
+  margin: 20px 0 10px;
+`;
+
+const DescriptionList = styled.ul`
+  margin: 0;
+  padding-left: 20px;
+  color: ${({ theme }) => theme.secondaryText};
+
+  li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+  }
+
+  strong {
+    color: ${({ theme }) => theme.color};
+  }
+`;
 
 function Experience(props) {
-  const theme = useContext(ThemeContext);
   const { header } = props;
   const [data, setData] = useState(null);
 
@@ -21,158 +98,64 @@ function Experience(props) {
       .catch((err) => err);
   }, []);
 
-  // Theme-dependent styles
-  const styles = {
-    ulStyle: { listStylePosition: 'outside', paddingLeft: 20, marginTop: 8 },
-    subtitleContainerStyle: { marginTop: 6, marginBottom: 6 },
-    subtitleStyle: { display: 'inline-block', fontSize: '1em', fontWeight: 500 },
-    inlineChild: { display: 'inline-block', fontSize: '0.95em' },
-    itemStyle: { marginBottom: 10 },
-    topRow: {
-      display: 'flex',
-      alignItems: 'flex-start',
-      gap: '18px',
-      marginBottom: 6,
-    },
-    textCol: {
-      flex: 2,
-      minWidth: 0,
-    },
-    mediaCol: {
-      flex: '0 0 auto',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      marginLeft: '18px', // closer to text
-    },
-    image: {
-      maxWidth: '180px',
-      maxHeight: '180px',
-      borderRadius: '12px',
-      boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
-      marginLeft: 0,
-      marginBottom: '6px',
-    },
-    keywords: {
-      display: 'flex',
-      flexWrap: 'wrap',
-      gap: '6px',
-      fontSize: '10px',
-      marginTop: '4px',
-      color: theme.secondaryText,
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    keywordBadge: {
-      background: theme.accentColor,
-      color: '#fff',
-      borderRadius: '8px',
-      padding: '2px 8px',
-      fontSize: '10px',
-      fontWeight: 500,
-      letterSpacing: '0.5px',
-    },
-    itemBody: {
-      color: theme.color,
-      background: theme.background,
-      padding: '24px',
-      borderRadius: '8px',
-      boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
-    },
-    dateInner: {
-      background: theme.accentColor,
-      color: '#fff',
-      fontWeight: 500,
-    },
-    itemTitle: {
-      fontSize: '1.18em',
-      fontWeight: 600,
-      margin: 0,
-      lineHeight: 1.2,
-    },
-    itemSubtitle: {
-      fontSize: '1em',
-      fontWeight: 500,
-      margin: 0,
-    },
-    descriptionTitle: {
-      fontSize: '1em',
-      fontWeight: 600,
-      margin: '16px 0 8px 0',
-      color: theme.accentColor,
-      letterSpacing: '0.5px',
-    },
-  };
-
   return (
     <>
       {header && <Header title={header} />}
-      <Container>
+      <Section>
         {data ? (
-          <Timeline lineColor={theme.timelineLineColor}>
-            {data.map((item) => (
-              <TimelineItem
-                key={item.title + item.dateText}
-                dateText={item.dateText}
-                dateInnerStyle={styles.dateInner}
-                style={styles.itemStyle}
-                bodyContainerStyle={styles.itemBody}
-              >
-                {/* Top row: title, subtitle, workType, image, and keywords */}
-                <div style={styles.topRow}>
-                  <div style={styles.textCol}>
-                    <h2 className="item-title" style={styles.itemTitle}>{item.title}</h2>
-                    <div style={styles.subtitleContainerStyle}>
-                      <span style={{ ...styles.subtitleStyle, color: theme.accentColor }}>
-                        {item.subtitle}
-                      </span>
-                      {item.workType && (
-                        <span style={styles.inlineChild}>
-                          &nbsp;·
-                          {' '}
-                          {item.workType}
-                        </span>
+          <TimelineTrack>
+            {data.map((item, index) => (
+              <Row key={item.title + item.dateText}>
+                <DotCol>
+                  <Dot $current={index === 0} />
+                </DotCol>
+                <ContentCol>
+                  <Card
+                    variants={cardEnterVariants}
+                    initial="hiddenUp"
+                    whileInView="show"
+                    viewport={{ once: true, margin: '-60px' }}
+                  >
+                    <DateBadge>{item.dateText}</DateBadge>
+                    <TopRow>
+                      <TitleBlock>
+                        <ItemTitle>{item.title}</ItemTitle>
+                        <SubtitleRow>
+                          <SubtitleAccent>{item.subtitle}</SubtitleAccent>
+                          {item.workType && (
+                            <WorkType>
+                              &nbsp;·&nbsp;
+                              {item.workType}
+                            </WorkType>
+                          )}
+                        </SubtitleRow>
+                      </TitleBlock>
+                      {item.media?.type === 'IMAGE' && item.media.source?.url && (
+                        <MediaImg src={item.media.source.url} alt={item.media.name || ''} />
                       )}
-                    </div>
-                  </div>
-                  {(item.media && item.media.type === 'IMAGE' && item.media.source && item.media.source.url) && (
-                    <div style={styles.mediaCol}>
-                      <img
-                        src={item.media.source.url}
-                        alt={item.media.alt || ''}
-                        style={styles.image}
-                      />
-                      {item.keywords && item.keywords.length > 0 && (
-                        <div style={styles.keywords}>
-                          {item.keywords.map((kw) => (
-                            <span key={kw} style={styles.keywordBadge}>
-                              {kw}
-                            </span>
+                    </TopRow>
+
+                    {item.workDescription && item.workDescription.length > 0 && (
+                      <>
+                        <DescriptionTitle>Highlights</DescriptionTitle>
+                        <DescriptionList>
+                          {item.workDescription.map((point) => (
+                            <li key={point}>
+                              <ReactMarkdown components={{ p: 'span' }}>{point}</ReactMarkdown>
+                            </li>
                           ))}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </div>
-                {/* Description section with a title, spanning full width */}
-                <h5 style={styles.descriptionTitle}>Description</h5>
-                <ul style={styles.ulStyle}>
-                  {item.workDescription
-                    && item.workDescription.map((point) => (
-                      <li key={point}>
-                        <ReactMarkdown components={{ p: 'span' }}>
-                          {point}
-                        </ReactMarkdown>
-                      </li>
-                    ))}
-                </ul>
-              </TimelineItem>
+                        </DescriptionList>
+                      </>
+                    )}
+                  </Card>
+                </ContentCol>
+              </Row>
             ))}
-          </Timeline>
+          </TimelineTrack>
         ) : (
           <FallbackSpinner />
         )}
-      </Container>
+      </Section>
     </>
   );
 }
